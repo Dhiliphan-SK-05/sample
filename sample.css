@@ -74,7 +74,7 @@ nav :is(a:hover, a:focus){
 main{
     padding: 20px;
     background-color: rgba(0, 0, 0, 0.54);
-    background-image: url('/CSS/images/scenic.jpeg');
+    background-image: url('scenic.jpeg');
     background-blend-mode:luminosity;
     background-repeat: no-repeat;
     background-size: cover;
@@ -98,7 +98,7 @@ img{
     border: 10px solid rgba(65, 105, 225, 0.249);
 }
 .card{
-    background-image: url('/CSS/images/scenic.jpeg');
+    background-image: url('scenic.jpeg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: right;
