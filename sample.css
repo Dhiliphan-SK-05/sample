@@ -1,0 +1,213 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Progressive soul';
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+figcaption{
+    position: absolute;
+    left: -10000px;
+}
+li{
+    display: grid;
+}
+
+ul li{
+    list-style-type: none;
+    color: black;
+}
+header,nav,main,footer{
+    display: grid;
+    place-content: center;
+    grid-template-columns: 100%;
+    text-align: center
+}
+header,footer{
+    position: sticky;
+}
+header{
+    font-size: 1.5rem;
+    top: 0;
+    background-color: rgb(227, 163, 163);
+}
+footer{
+    bottom: 0;
+    background-color: rgb(227, 163, 163);
+}
+span{
+    font-weight: 900;
+    font-family:'Figtree';
+}
+ul{
+    display:flex;
+    justify-content: center;
+    gap: 20px;
+}
+nav{
+    width: 100%;
+    background-color: aliceblue;
+    color: blueviolet;
+    padding: 0.5rem;
+    border-bottom: 2px solid black;
+}
+nav a :active{
+    color: chocolate;
+}
+
+nav a :visited{
+    color: rgb(255, 3, 3);
+}
+nav a{
+    color: black;
+}
+nav :is(a:hover, a:focus){
+    color: hsla(0, 98%, 46%, 0.604);
+}
+main{
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.54);
+    background-image: url('scenic.jpeg');
+    background-blend-mode:luminosity;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-grow: 1;
+    justify-content:space-around;
+    /* flex-wrap: wrap; */
+    gap: 10px;
+}
+
+img{
+    margin: 20px;
+    width: 80%;
+    height: auto;
+    border-radius: 50%;
+    border: 2px solid black;
+}
+.card img[alt]{
+    border: 10px solid rgba(65, 105, 225, 0.249);
+}
+.card{
+    background-image: url('scenic.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: right;
+    transition: all 1s;
+}
+.card:nth-child(2){
+    background-position: left;
+}
+.card:nth-child(3){
+    background-position: center;
+}
+.card:hover{
+    width: min(100%,400px);
+    height: auto;
+    transition: all ease-in-out 1s;
+}
+.card{
+    box-shadow: 15px 9px 10px rgb(155, 58, 111);
+}
+/* .card h2::after{
+     content: "\2728"; 
+     display: block;
+} 
+.card h2::before{
+    content: "\2728"; 
+    display: block;
+} */
+/* It add content before and after for eg uncomment above code */
+h2,p{
+    padding: 10px;
+}
+h2{
+    letter-spacing: 4px;
+}
+.card p::before{
+    content: open-quote;
+    font-size: 2rem;
+    
+}
+.card p::after{
+    content: close-quote;
+    font-size: 2rem;
+}
+.card1,.card2,.card3{
+    scroll-margin-top:7rem;
+    /* border: 2px solid rgba(36, 114, 128, 0.231); */
+    background-color: rgb(42, 104, 104);
+    width: min(100%,350px);
+    /* width: 300px; */
+    height: auto;
+    border-radius: 10px;
+    /* margin-bottom: 15px; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+@media screen and (min-width:576px) {
+
+    nav{
+        display: none;
+    }
+    h2{
+        display: flex;
+        order: -1;
+        font-size: 2.5rem;
+    }
+    p{
+        font-size: 1.5rem;
+    }
+    main{
+        flex-flow: row wrap;
+    }
+    .card{
+        width: min(100%,300px);
+    }
+    .card3{
+        order: -1;
+    }
+}
+@media screen and (min-width:768px) {
+    nav{
+        display: none;
+    }
+    .card{
+        width: min(100%,325px);
+    }
+}
+@media screen and (min-width:998px) {
+    .card{
+        width: min(100%,400px);
+    }
+    .card2{
+        order: -1;
+    }
+}
+@media screen and (min-Width:1200px) {
+    .card{
+        width: min(100%,300px);
+    }   
+}
+@media screen and (max-height:425px) and (min-aspect-ratio: 7/4) {
+    h1{
+        font-size: 1.5rem;
+    }
+    nav{
+        display: none;
+    }
+    main{
+        flex-flow: row nowrap;
+    } 
+}
